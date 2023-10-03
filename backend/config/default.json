@@ -1,0 +1,12 @@
+{
+    "mongodb": {
+        "connectionString": "mongodb://localhost:27017/exam"
+    },
+    "jwt": {
+        "secret" : "Examination"
+    },
+    "mail-credentials" : {
+        "userid" :"admin@gmail.com",
+        "password" : "test@2004"
+    }
+}
