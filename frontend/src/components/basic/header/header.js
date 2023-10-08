@@ -30,7 +30,6 @@ export const HomepageHeader = (props)=>{
     <ThemeProvider theme={theme}>
       <AppBar>
         <Toolbar>
-          <img src={props.img} alt="Logo" className={classes.logoimg}/>
           <div className={classes.name} >
             {props.title}
           </div>

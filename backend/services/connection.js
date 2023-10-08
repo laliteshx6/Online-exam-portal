@@ -17,13 +17,13 @@ const options = {
 
 mongoose.connect(config.get('mongodb.connectionString'),options).then(()=>{
     console.log("connected to mongoDB");
-    // hashPassword("systemadmin").then((hash)=>{
-    //   var tempAdmin = new adminModel({
-    //     username : "sysadmin",
-    //     password : hash
-    //   })
-    //   tempAdmin.save();
-    // })
+    hashPassword("systemadmin").then((hash)=>{
+      var tempAdmin = new adminModel({
+      username : "sysadmin",
+       password : "hash"
+      })
+      tempAdmin.save();
+    })
     
 }).catch((err)=>{
     console.log("Error connecting to database",err);
