@@ -7,15 +7,6 @@
     "test": "jest",
     "start": "nodemon"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com//backend.git"
-  },
-  "author": "Chintan Golakiya",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com//backend/issues"
-  },
   "homepage": "https://github.com//backend#readme",
   "dependencies": {
     "app-root-path": "^2.2.1",
