@@ -7,6 +7,7 @@ import { getUserDetails } from "../../../redux/actions/loginAction";
 import { Drawer, Typography, withStyles, AppBar, Toolbar, List, ListItem, ListItemText } from "@material-ui/core";
 import AlertBox from '../../atoms/Alertbox/AlertBox';
 import TestDetailsStudent from "../../templates/TestDetails/TestDetailsStudent";
+import { Button } from '@material-ui/core';
 import UpcomingStudentTestsDetails from "../../templates/TestDetails/UpcomingStudentTestsDetails";
 import CompletedTestsDetailsStudent from "../../templates/TestDetails/CompletedTestsDetailsStudent";
 const drawerWidth = 200
@@ -42,10 +43,50 @@ class StudentHomepage extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      content:(<div>Welcome to Exam portal</div>),
+      content:(
+      <div class="container">
+        
+          <h1 >Guidelines </h1>
+        <div class="centered">      
+            <ol>
+                <li>Students must not engage in any form of malpractice during the exam.</li>
+                <li>Plagiarism, cheating, and unauthorized collaboration are strictly prohibited.</li>
+                <li>Using external resources or unauthorized materials during the exam is not allowed.</li>
+                <li>Impersonation or having someone else take the exam on behalf of the student is a serious violation.</li>
+                <li>Accessing or sharing exam questions or answers before or after the exam period is forbidden.</li>
+                <li>Students should not attempt to tamper with the exam software, data, or security measures.</li>
+                <li>Engaging in any form of disruptive behavior during the exam is unacceptable.</li>
+                <li>Falsifying personal information or identification for the exam is a breach of rules.</li>
+                <li>Using any unauthorized aids or devices to gain an unfair advantage is against the rules.</li>
+                <li>Any violation of these rules will result in appropriate penalties and disciplinary actions.</li>
+                <br>
+                </br>
+            </ol>
+        </div>
+     </div>
+    ),
       menuList:[{
         title:'Home',
-        content:(<div>Welcome to Exam portal</div>)
+        content:(
+          <div>
+          <ol>
+              <li>Students must not engage in any form of malpractice during the exam.</li>
+              <li>Plagiarism, cheating, and unauthorized collaboration are strictly prohibited.</li>
+              <li>Using external resources or unauthorized materials during the exam is not allowed.</li>
+              <li>Impersonation or having someone else take the exam on behalf of the student is a serious violation.</li>
+              <li>Accessing or sharing exam questions or answers before or after the exam period is forbidden.</li>
+              <li>Students should not attempt to tamper with the exam software, data, or security measures.</li>
+              <li>Engaging in any form of disruptive behavior during the exam is unacceptable.</li>
+              <li>Falsifying personal information or identification for the exam is a breach of rules.</li>
+              <li>Using any unauthorized aids or devices to gain an unfair advantage is against the rules.</li>
+              <li>Any violation of these rules will result in appropriate penalties and disciplinary actions.</li>
+          </ol>
+          <br></br>
+          <Typography variant='h6' align="center">
+                   <Button variant="contained`" className={this.props.classes.endtestbtn} onClick={()=>(this.UpcomingStudentTestsDetails())}>Start Exam</Button>
+                  </Typography>
+      </div>
+        )      
       },{
         title : 'View All tests',
         content:<TestDetailsStudent/>
@@ -107,7 +148,7 @@ class StudentHomepage extends React.Component{
                 </ListItem>
               ))}
               <ListItem>
-              <LogoutButton/>
+                <LogoutButton/>
               </ListItem>
             </List>
           </Drawer>
